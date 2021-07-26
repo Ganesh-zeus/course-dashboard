@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+}
+
+.container {
+  margin-left:1rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+/* fonts */
+@font-face {
+  font-family: "QuicksandBold";
+  src: url("./assets/fonts/Quicksand-Bold.ttf");
+}
+
+@font-face {
+font-family: "QuicksandLight";
+src: url("./assets/fonts/Quicksand-Light.ttf");
+}
+
+@font-face {
+font-family: "QuicksandMedium";
+src: url("./assets/fonts/Quicksand-Medium.ttf");
+}
+
+@font-face {
+font-family: "QuicksandRegular";
+src: url("./assets/fonts/Quicksand-Regular.ttf");
+}
+
+@font-face {
+font-family: "QuicksandSemiBold";
+src: url("./assets/fonts/Quicksand-SemiBold.ttf");
+}
