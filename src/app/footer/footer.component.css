@@ -1,0 +1,29 @@
+.footer {
+    font-family: QuicksandBold,sans-serif;
+    font-size: 12px;
+    min-height: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-light {
+    background-color: #E0E1E1;
+    color: #616161; 
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.tilde {
+    height: 1.5rem;
+    width: 0.1rem;
+    background-color: #0000001F;
+    margin: 0 1rem;
+}
+
+.footer-content p {
+    padding: 0 0.5rem;
+}
