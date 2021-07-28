@@ -1,10 +1,10 @@
 <nav class="navbar-fixed navbar-dark">
   <div class="container d-flex">
-    <a href="/" class="nav-brand">
+    <a routerLink="/" class="nav-brand mr-auto">
       <img src="../../assets/icons/logoHeader.svg" alt="logo" />
     </a>
 
-    <ul class="navbar-nav ml-auto md-hide">
+    <ul class="navbar-nav ml-auto md-hide" *ngIf="isDashboard">
       <li
         class="nav-item"
         *ngFor="let link of navLinkList"
@@ -15,22 +15,40 @@
       </li>
     </ul>
 
-    <ul class="navbar-nav ml-md-auto">
-      <li class="nav-item">
-        <img src="../../assets/icons/alerts.svg" alt="alerts" />
+    <ul class="navbar-nav ml-md-auto" *ngIf="isDashboard">
+      <li class="nav-item dropdown">
+        <img
+          src="../../assets/icons/alerts.svg"
+          (click)="isAlertsOpen = !isAlertsOpen"
+          alt="alerts"
+        />
+        <div class="dropdown-menu" [ngClass]="{ open: isAlertsOpen }">
+          alerts
+        </div>
       </li>
-      <li class="nav-item">
-        <img src="../../assets/icons/announcements.svg" alt="announcements" />
+      <li class="nav-item dropdown">
+        <img
+          src="../../assets/icons/announcements.svg"
+          (click)="isAnnouncementsOpen = !isAnnouncementsOpen"
+          alt="announcements"
+        />
+        <div class="dropdown-menu" [ngClass]="{ open: isAnnouncementsOpen }">
+          announcements
+        </div>
       </li>
       <li class="nav-item">
         <img src="../../assets/images/profile.jpeg" alt="profile" />
       </li>
     </ul>
 
-    <button class="nav-toggler">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+    <div class="dropdown" *ngIf="isDashboard">
+      <button class="nav-toggler" (click)="isMenuOpen = !isMenuOpen">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <div class="dropdown-menu" [ngClass]="{ open: isMenuOpen }">menu</div>
+    </div>
   </div>
 </nav>
