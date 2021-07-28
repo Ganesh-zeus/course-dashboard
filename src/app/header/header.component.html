@@ -1,26 +1,29 @@
-<nav class="navbar navbar-dark">
+<nav class="navbar-fixed navbar-dark">
   <div class="container d-flex">
     <a href="/" class="nav-brand">
       <img src="../../assets/icons/logoHeader.svg" alt="logo" />
     </a>
 
     <ul class="navbar-nav ml-auto md-hide">
-      <li class="nav-item active"><a href="">DASHBOARD</a></li>
-      <li class="nav-item"><a href="">CONTENT</a></li>
-      <li class="nav-item"><a href="">USERS</a></li>
-      <li class="nav-item"><a href="">REPORTS</a></li>
-      <li class="nav-item"><a href="">ADMIN</a></li>
+      <li
+        class="nav-item"
+        *ngFor="let link of navLinkList"
+        [ngClass]="{ active: activeLink === link }"
+        (click)="activeLink = link"
+      >
+        <a>{{ link }}</a>
+      </li>
     </ul>
 
     <ul class="navbar-nav ml-md-auto">
       <li class="nav-item">
-        <img src="../../assets/icons/alerts.svg" alt="" />
+        <img src="../../assets/icons/alerts.svg" alt="alerts" />
       </li>
       <li class="nav-item">
-        <img src="../../assets/icons/announcements.svg" alt="" />
+        <img src="../../assets/icons/announcements.svg" alt="announcements" />
       </li>
       <li class="nav-item">
-        <img src="../../assets/images/profile.jpeg" alt="" />
+        <img src="../../assets/images/profile.jpeg" alt="profile" />
       </li>
     </ul>
 
